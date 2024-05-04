@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const containerStyle = {
     display: 'flex',
@@ -12,6 +13,13 @@ const starContainerStyle = {
 };
 
 // { maxRating = 10 } setzt den Standartwert auf 10
+StarRating.propTypes = {
+    maxRating: PropTypes.number,
+    defaultRating: PropTypes.number,
+    size: PropTypes.number,
+    messages: PropTypes.array,
+    onSetRating: PropTypes.func,
+};
 
 export default function StarRating({
     maxRating = 10,
@@ -83,6 +91,7 @@ function Star({ onRate, full, onHoverIn, onHoverOut, color, size }) {
             onClick={onRate}
             onMouseEnter={onHoverIn}
             onMouseLeave={onHoverOut}
+            S
         >
             {full ? (
                 <svg
