@@ -42,7 +42,8 @@ export default function StarRating({
 
     function handleRating(rating) {
         setRating(rating);
-        onSetRating(rating);
+        // wird nur gebraucht wenn die Komponente "Test" genutzt wird
+        // onSetRating(rating);
     }
 
     return (
