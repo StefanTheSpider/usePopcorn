@@ -42,8 +42,8 @@ export default function StarRating({
 
     function handleRating(rating) {
         setRating(rating);
-        // wird nur gebraucht wenn die Komponente "Test" genutzt wird
-        // onSetRating(rating);
+        // wird nur gebraucht wenn die Komponente "Test oder irgendwo anders genutzt wird" genutzt wird
+        onSetRating(rating);
     }
 
     return (
@@ -57,7 +57,7 @@ export default function StarRating({
                                     ? hoverRating >= i + 1
                                     : rating >= i + 1
                             }
-                            key={1}
+                            key={i}
                             onRate={() => handleRating(i + 1)}
                             onHoverIn={() => setHoverRating(i + 1)}
                             onHoverOut={() => setHoverRating(0)}
